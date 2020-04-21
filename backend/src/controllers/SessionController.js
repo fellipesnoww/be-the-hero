@@ -1,0 +1,16 @@
+const connection = require('../database/connection');
+
+//No login so ira verificar se o id existe na tabela de ong
+module.exports = {
+    async create(request, response){
+        const {id} = request.body;
+
+        const ong = await connection('ongs').where('id', id).select('name').first();
+
+        if(!ong){
+            return response.status(400).json({error: "No ONG found with this ID"});
+        }
+
+        return response.json(ong);
+    }
+}
