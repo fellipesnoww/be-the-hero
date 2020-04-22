@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors);
+//app.use(cors);
 app.use(express.json()); //Informa ao express que sera utilizado o formato JSON nas requisicoes
 app.use(routes);
 /**
