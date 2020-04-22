@@ -64,7 +64,7 @@ export default StyleSheet.create({
     action:{
         backgroundColor: "#e02041",
         borderRadius: 8,
-        height: 50,
+        height: 60,
         width: '48%',
         justifyContent: 'center',
         alignItems: "center"

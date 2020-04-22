@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Image, Text, TouchableOpacity, Linking} from 'react-native';
-import {Feather} from '@expo/vector-icons';
+import {Feather, FontAwesome} from '@expo/vector-icons';
 import * as MailComposer from 'expo-mail-composer';
 import {useNavigation, useRoute} from '@react-navigation/native';
 
@@ -59,10 +59,12 @@ export default function Detail(){
 
                 <View style={styles.actions}>
                     <TouchableOpacity style={styles.action} onPress={sendWhatsApp}>
-                        <Text style={styles.actionText}>WhatsApp</Text>
+                        <FontAwesome name="whatsapp" size={28} color="#FFF"/>
+                        <Text style={styles.actionText}>WhatsApp</Text>                        
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.action} onPress={sendMail}>
+                        <Feather name="mail" size={28} color="#FFF"/>
                         <Text style={styles.actionText}>E-mail</Text>
                     </TouchableOpacity>
                 </View>

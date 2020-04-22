@@ -43,7 +43,7 @@ export default function Incidents(){
     }
 
     useEffect(() => {
-
+        loadIncidents();
     });
     return(
         <View style={styles.container}>
@@ -74,8 +74,8 @@ export default function Incidents(){
                         <Text style={styles.incidentProperty}>Valor:</Text>
                         <Text style={styles.incidentValue}>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(incident.value)}</Text>
 
-                        <TouchableOpacity style={styles.detailsButton} onPress={() => navigationToDetail}>
-                            <Text style={styles.detailsButtonText}>{incident.value}</Text>
+                        <TouchableOpacity style={styles.detailsButton} onPress={() => navigationToDetail(incident)}>
+                            <Text style={styles.detailsButtonText}>Veja mais detalhes</Text>
                             <Feather name="arrow-right" size={16} color="#E02041"/>
                         </TouchableOpacity>
                 </View>
